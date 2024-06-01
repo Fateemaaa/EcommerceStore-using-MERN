@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us | E-Commerce Website</title>
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <div id="1"></div>
+  <script>
+    load("header.html");
+    function load(url) {
+      const req = new XMLHttpRequest();
+      req.open("GET", url, false);
+      req.send(null);
+      document.getElementById(1).innerHTML = req.responseText;
+    }
+  </script>
+  
+  <h1>About Us</h1>
+  <p>Welcome to our e-commerce platform...</p>
+
+  <div id="4"></div>
+  <script>
+    load("footer.html");
+    function load(url) {
+      const req = new XMLHttpRequest();
+      req.open("GET", url, false);
+      req.send(null);
+      document.getElementById(4).innerHTML = req.responseText;
+    }
+  </script>
+</body>
+</html>

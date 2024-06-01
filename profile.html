@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile | E-Commerce Website</title>
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div id="1"></div>
+  <script>
+    load("header.html");
+    function load(url) {
+      const req = new XMLHttpRequest();
+      req.open("GET", url, false);
+      req.send(null);
+      document.getElementById(1).innerHTML = req.responseText;
+    }
+  </script>
+
+  <h1>Profile</h1>
+  <form id="profile-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+    <input type="submit" value="Update Profile">
+  </form>
+
+  <!-- Footer Container -->
+<div id="4"></div>
+<script>
+    function loadFooter(elementId) {
+        // Ensure the correct relative path is used
+        const req = new XMLHttpRequest();
+        req.open("GET", "footer.html", false);
+        req.send(null);
+
+        // Set the response text to the specified element
+        document.getElementById(elementId).innerHTML = req.responseText;
+    }
+
+    // Load the footer into the div with id "4"
+    loadFooter("4");
+</script>
+
+</body>
+</html>
